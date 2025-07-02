@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diya-dev Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        *{
+            margin: 0;
+            padding: 0
+        }
+
+        body{
+            background-color: rgb(0,0,33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(32, 32, 75);
+        }
+
+        nav ul{
+            display: flex;
+            list-style: none;
+            justify-content: center;
+        }
+
+        nav ul li a{
+            margin: 0 20px;
+            font-size: 18px;
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover{
+            color: blueviolet;
+            font-size: 20px;
+        }
+
+        .left{
+            font-size: 20px;
+        }
+
+        #para{
+            font-size: 15px;
+            color: rgb(172, 170, 174);
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+
+        .firstSec{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 110px 0
+        }
+
+        .firstSec > div{
+            width: 30%
+        }
+
+        .leftSec{
+            font-size: 40px;
+        }
+
+        .rightSec{
+           width: 80%;
+        }
+
+        .purple{
+           color: blueviolet; 
+        }
+
+        #element{
+            color: rgb(154, 88, 215);
+            font-size: 45px;
+        }
+
+        main hr{
+            border: 0;
+            background-color: rgb(178, 141, 228);
+            height: 1.2px;
+            margin: 30px 84px;
+        }
+
+        #secondSec {
+            margin: 50px 0;
+            padding: 0 40px;
+        }
+
+        #secondSec p {
+            font-size: 35px;
+            color: rgb(178, 141, 228);
+            text-align: center;
+            margin-bottom: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #secondSec h1 {
+            font-size: 25px;
+            color: rgb(174, 138, 206);
+            margin-bottom: 25px;
+            margin-left: 10px;
+        }
+
+        .skillsContainer {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .skillCard {
+            background: linear-gradient(145deg, #1f1f47, #2c2c6c);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .skillCard:hover {
+            transform: scale(1.07);
+            box-shadow: 0 8px 25px rgba(178, 141, 228, 0.6);
+            cursor: pointer;
+        }
+
+        .skillCard i {
+            font-size: 24px;
+        }
+
+        #educationSec {
+        padding: 50px 40px;
+        color: white;
+    }
+
+    #educationSec h1 {
+        font-size: 32px;
+        color: rgb(178, 137, 212);
+        margin-bottom: 30px;
+    }
+
+    .eduCard {
+        background-color: rgb(148, 148, 176);
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
+    }
+
+    .eduCard h2 {
+        font-size: 24px;
+        color: #2b0f4f;
+    }
+
+    .eduCard h3 {
+        font-size: 20px;
+        color: #2b2b79;
+        margin-top: 10px;
+    }
+
+    .eduCard p, .eduCard li {
+        font-size: 20px;
+        color: #1a191f;
+        margin: 5px 0;
+    }
+
+    .eduCard ul {
+        margin-top: 10px;
+        padding-left: 20px;
+    }
+
+    .contactSec {
+        padding: 60px 40px;
+        background-color: #1a1a40;
+        color: white;
+        text-align: center;
+        border-top: 2px solid rgb(205, 145, 205);
+    }
+
+    .contactSec h1 {
+        font-size: 36px;
+        color: rgb(214, 157, 214);
+        margin-bottom: 15px;
+    }
+
+    .contactSec p {
+        font-size: 18px;
+        margin-bottom: 30px;
+        color: #ccc;
+    }
+
+    .socialIcons {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .socialIcons a {
+        text-decoration: none;
+        color: white;
+        font-size: 28px;
+        background-color: #292966;
+        padding: 15px;
+        border-radius: 50%;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        box-shadow: 0 4px 15px rgba(178, 141, 228, 0.4);
+    }
+
+    .socialIcons a:hover {
+        background-color: violet;
+        color: #1a1a40;
+        transform: scale(1.15);
+    }
+
+    .projectsSec {
+        padding: 60px 40px;
+        background-color: #0f0f2d;
+        color: white;
+    }
+
+    .projectsSec h1 {
+        font-size: 36px;
+        color: rgb(215, 163, 215);
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .projectsContainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+
+    .projectCard {
+        background-color: #1f1f47;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(178, 141, 228, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .projectCard:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(178, 141, 228, 0.5);
+    }
+
+    .projectCard h2 {
+        color: #fbc3ff;
+        margin-bottom: 10px;
+    }
+
+    .projectCard p {
+        font-size: 16px;
+        margin: 8px 0;
+        color: #dcdcdc;
+    }
+
+    .projectLinks {
+        margin-top: 15px;
+    }
+
+    .projectLinks a {
+        text-decoration: none;
+        margin-right: 15px;
+        background-color: rgb(227, 179, 227);
+        color: #1a1a40;
+        padding: 8px 12px;
+        border-radius: 8px;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+    }
+
+    .projectLinks a:hover {
+        background-color: #b46ce1;
+    }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Diya's Portfolio</div>
+            <div class="right">
+                <ul>
+                   <li><a href="/">Home</a></li>
+                    <li><a href="#educationSec">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSec">
+            <div class="leftSec">
+                Hi, My name is <span class="purple">Diya Choudhuri</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+                <p id="para">Passionate about coding and creating cool, user-friendly web apps.
+                   I love exploring full-stack development, dabbling in machine learning, and turning ideas into functional magic.
+                   Always learning, always building 💻✨</p>
+            </div>
+            <div class="rightSec">
+                <img src="diya_pic.jpg" alt="" style="width: 80%; height: auto; border-radius: 50%; margin: 30px 0">
+            </div>
+        </section>
+<hr>
+    <section id="secondSec">
+        <p>Skills</p>
+  <h1>Programming Languages</h1>
+  <div class="skillsContainer">
+    <div class="skillCard"><i class="fab fa-python" style="color:#FFD43B;"></i> Python</div>
+    <div class="skillCard"><i class="fab fa-java" style="color:#EA2D2E;"></i> Java</div>
+    <div class="skillCard"><i class="fas fa-code" style="color:#5E5DF0;"></i> C</div>
+    <div class="skillCard"><i class="fas fa-laptop-code" style="color:#0078D4;"></i> C++</div>
+    <div class="skillCard"><i class="fas fa-database" style="color:#0a9396;"></i> SQL</div>
+  </div>
+
+  <h1 style="margin-top: 60px;">Web Technologies & Tools</h1>
+  <div class="skillsContainer">
+    <div class="skillCard"><i class="fab fa-html5" style="color:#e34c26;"></i> HTML</div>
+    <div class="skillCard"><i class="fab fa-css3-alt" style="color:#264de4;"></i> CSS</div>
+    <div class="skillCard"><i class="fab fa-js" style="color:#f0db4f;"></i> JavaScript</div>
+    <div class="skillCard"><i class="fab fa-react" style="color:#61DBFB;"></i> ReactJS</div>
+    <div class="skillCard"><i class="fab fa-node-js" style="color:#68a063;"></i> Node.js</div>
+    <div class="skillCard"><i class="fas fa-server" style="color:#9c27b0;"></i> Express</div>
+    <div class="skillCard"><i class="fas fa-database" style="color:#4DB33D;"></i> MongoDB</div>
+  </div>
+
+</section>
+    <hr>
+
+    <section id="educationSec">
+  <h1>Education</h1>
+  <div class="eduCard">
+    <h2>Senior Secondary (Class 12) </h2>
+    <h3>CBSE – Chinmaya Vidyalaya AnnaNagar</h3>
+    <p>2021 – 2023</p>
+    <p>Score: 98%</p>
+    <hr style="border: 1px solid rgb(45, 6, 96);">
+    <h2>B.Tech in Computer Science and Engineering</h2>
+    <h3>Vellore Institute of Technology, Chennai</h3>
+    <p>2023 – 2027</p>
+    <p><strong>CGPA:</strong> 9.6</p>
+    <ul>
+      <li>Focused on Full Stack Development, Machine Learning</li>
+      <li>Completed courses in DSA, DBMS, OS, and Networking</li>
+    </ul>
+  </div>
+</section>
+
+ <section class="projectsSec" id="projects">
+  <h1>My Projects</h1>
+  <div class="projectsContainer">
+    <div class="projectCard">
+      <h2>WorkDex - An Interactive ToDo List</h2>
+      <p> A task management web app designed to boost productivity by organizing your daily goals with simplicity and style.</p>
+      <p><strong>Tech:</strong> React, Node.js, Express, MongoDB</p>
+      <div class="projectLinks">
+        <a href="https://github.com/devdiyac/WorkDex" target="_blank">GitHub</a>
+        <a href="https://yourapp1.netlify.app" target="_blank">Live Demo</a>
+      </div>
+    </div>
+
+    <div class="projectCard">
+      <h2>Weather Forecast App</h2>
+      <p>Fetches real-time weather data for any city using OpenWeather API. Clean UI with temp & condition icons.</p>
+      <p><strong>Tech:</strong> HTML, CSS, JavaScript, API</p>
+      <div class="projectLinks">
+        <a href="https://github.com/devdiyac/weather-app" target="_blank">GitHub</a>
+        <a href="https://yourapp2.netlify.app" target="_blank">Live Demo</a>
+      </div>
+    </div>
+
+    <!-- Add more projectCard divs as needed -->
+  </div>
+</section>
+
+
+<section class="contactSec" id="contact">
+  <h1>Let's Connect 💬</h1>
+  <p>Got a project, a collab idea, or just wanna say hi? I'm all ears (and code)! Drop me a message or slide into my socials below 💌</p>
+
+  <form style="max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px;">
+    <input type="text" placeholder="Your Name" required style="padding: 12px; border: none; border-radius: 10px; font-size: 16px;">
+    <input type="email" placeholder="Your Email" required style="padding: 12px; border: none; border-radius: 10px; font-size: 16px;">
+    <textarea placeholder="Your Message" rows="5" required style="padding: 12px; border: none; border-radius: 10px; font-size: 16px;"></textarea>
+    <button type="submit" style="padding: 12px; background-color: violet; border: none; border-radius: 10px; font-size: 18px; color: #1a1a40; font-weight: bold; cursor: pointer; transition: 0.3s ease;">Send Message 🚀</button>
+  </form>
+
+  <div class="socialIcons" style="margin-top: 40px;">
+    <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank" title="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="https://github.com/devdiyac" target="_blank" title="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://instagram.com/yourinsta" target="_blank" title="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="mailto:diyachoudhuri@example.com" title="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
+</section>
+
+       
+
+
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+    var typed = new Typed('#element', {
+      strings: ['Web Developer', 'Tech Enthusiast','ML Learner'],
+      typeSpeed: 60,
+    });
+  </script>
+</body>
+</html>
